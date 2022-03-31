@@ -1,5 +1,5 @@
 <div>
-  <div class="box">{{post?.coloredTitle}}</div>
+  <div class="box" [ngClass]="[post?.colorClass]" >{{post?.coloredTitle}}</div>
   <div>And here should appear what I type:{{post?.userText}}</div>
   <input type="text" />
   <button>Click to change text color</button>

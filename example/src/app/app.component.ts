@@ -21,16 +21,19 @@ export class AppComponent implements OnInit {
     const form1 = new FormularioPostModel();
     form1.coloredTitle = "This should be a green box";
     form1.userText = "";
+    form1.colorClass= "green";
     this.formularioPosts.push(form1);
 
     const form2 = new FormularioPostModel();
     form2.coloredTitle = "This should be a red box";
     form2.userText="";
+    form2.colorClass="red";
     this.formularioPosts.push(form2);
 
     const form3 = new FormularioPostModel();
     form3.coloredTitle = "This should be a blue box";
     form3.userText = "";
+    form3.colorClass="blue";
     this.formularioPosts.push(form3);
 
   }
