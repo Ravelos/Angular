@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   mainTitle:string =" This is the test";
 
-
+  textAsteriks:string="";
 
   public formularioPosts: FormularioPostModel;
   constructor(){

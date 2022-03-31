@@ -7,10 +7,6 @@
  <app-tercer-formulario></app-tercer-formulario>
 </div>
 
-
-
-
-
 <hr/>
 Change this page title by:
 <input type="text"[(ngModel)]= "mainTitle"/>
@@ -18,7 +14,7 @@ Change this page title by:
 
 <div>
   <div>This box should come after the lines - with a red border</div>
-  <div>And here should appear what I type between asterisks:</div>
-  <input type="text"/>
+  <div>And here should appear what I type between asterisks:{{textAsteriks}}</div>
+  <input type="text"[(ngModel)]="textAsteriks"/>
   <button>Click to change text color</button>
 </div>

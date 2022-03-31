@@ -8,6 +8,8 @@ import { FormularioPostModel } from '../formulario-post-model';
 })
 export class FormularioPostComponent implements OnInit {
 
+  userText1:string="";
+
   @Input()
 
   public post: FormularioPostModel;

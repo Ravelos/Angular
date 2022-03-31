@@ -8,8 +8,10 @@ import { FormularioPostModel } from '../formulario-post-model';
 })
 export class SegundoFormularioComponent implements OnInit {
 
+  userText2:string="";
+
   public post2: FormularioPostModel | undefined;
-  
+
 
   constructor() {
     this.post2 = new FormularioPostModel;

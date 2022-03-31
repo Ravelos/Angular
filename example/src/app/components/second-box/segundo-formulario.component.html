@@ -1,6 +1,6 @@
 <div>
   <div class="box">{{post2?.coloredTitle}}</div>
-  <div>And here should appear what I type:</div>
-  <input type="text" />
+  <div>And here should appear what I type:{{userText2}}</div>
+  <input type="text" [(ngModel)] = "userText2"/>
   <button>Click to change text color</button>
 </div>
