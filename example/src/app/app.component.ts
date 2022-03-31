@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { style } from '@angular/animations';
+import { NgStyle } from '@angular/common';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormularioPostModel } from './components/formulario-post-model';
 
 @Component({
@@ -11,9 +13,11 @@ export class AppComponent implements OnInit {
 
   mainTitle:string =" This is the test";
 
+
   textAsteriks:string="";
 
   public formularioPosts: FormularioPostModel;
+
   constructor(){
     this.formularioPosts = new FormularioPostModel;
     this.formularioPosts.coloredTitle = "This should be a blue box";
@@ -21,8 +25,15 @@ export class AppComponent implements OnInit {
 
   }
 
+ clean():void{
 
+  this.formularioPosts.userText="";
 
+ }
+
+ changeTextColor(){
+
+ }
 
 
 
