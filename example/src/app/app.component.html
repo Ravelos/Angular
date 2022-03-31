@@ -1,0 +1,18 @@
+<h1>{{mainTitle }}</h1>
+
+
+<div>
+  <app-formulario-post  *ngFor="let item of formularioPosts" [post]="item"></app-formulario-post>
+</div>
+
+<hr/>
+Change this page title by:
+<input type="text"[(ngModel)]= "mainTitle"/>
+<hr/>
+
+<div>
+  <div>This box should come after the lines - with a red border</div>
+  <div>And here should appear what I type between asterisks:</div>
+  <input type="text"/>
+  <button>Click to change text color</button>
+</div>
