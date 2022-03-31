@@ -9,31 +9,19 @@ import { FormularioPostModel } from './components/formulario-post-model';
 export class AppComponent implements OnInit {
   title = 'This is the great test of ALL!!!';
 
-  mainTitle:string =" This is the test"
+  mainTitle:string =" This is the test";
 
-  formUserText:string = "";
 
-  public formularioPosts: FormularioPostModel [] = [];
 
+  public formularioPosts: FormularioPostModel;
   constructor(){
-    this.formularioPosts = [];
-
-    const form1 = new FormularioPostModel();
-    form1.coloredTitle = "This should be a green box";
-    form1.userText = "";
-    this.formularioPosts.push(form1);
-
-    const form2 = new FormularioPostModel();
-    form2.coloredTitle = "This should be a red box";
-    form2.userText="";
-    this.formularioPosts.push(form2);
-
-    const form3 = new FormularioPostModel();
-    form3.coloredTitle = "This should be a blue box";
-    form3.userText = "";
-    this.formularioPosts.push(form3);
+    this.formularioPosts = new FormularioPostModel;
+    this.formularioPosts.coloredTitle = "This should be a blue box";
+    this.formularioPosts.userText = "";
 
   }
+
+
 
 
 

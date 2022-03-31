@@ -10,11 +10,18 @@ export class FormularioPostComponent implements OnInit {
 
   @Input()
 
-  public post: FormularioPostModel | undefined;
+  public post: FormularioPostModel;
 
-  formUserText:string ="";
+  constructor() {
 
-  constructor() { }
+    this.post = new FormularioPostModel;
+
+    this.post.coloredTitle="This should be a green box";
+
+
+
+   }
+
 
   ngOnInit(): void {
   }
