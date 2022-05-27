@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/authentication/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +12,20 @@ export class LoginComponent implements OnInit {
   user:string ='';
   password:string='';
 
-  constructor() { }
+  constructor(private authenticationService:AuthenticationService,
+    private router:Router
+    ) { }
 
   ngOnInit(): void {
   }
 
   login(){
-    console.log(this.user);
-    console.log(this.password);
+    this.authenticationService.authenticate(this.user,this.password).subscribe(()=>{
+      this.router.navigate(['animals']);
+    },(error)=>{
+      alert("wrong user or password");
+      console.log(error);
+    }
+    )
   }
 }
