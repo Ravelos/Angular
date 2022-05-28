@@ -8,7 +8,11 @@
     placeholder="Username"
     [(ngModel)]="user"
     name="user"
+    #userField="ngModel"
+    required
     />
+    <app-message
+    ngIf="userField.invalid" message="User is required"></app-message>
   </div>
 
   <div class="form-group">
